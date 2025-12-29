@@ -72,8 +72,7 @@
 #define RCC_PERIPHERAL	  	  (AHB1_PERIPHERAL + RCC_PERIPHERAL_OFFSET)
 
 #define RCC_APB1ENR_OFFSET 0x40
-#define RCC_APB1ENR (*(volatile unsigned int *)(APB1_PERIPHERAL + RCC_APB1ENR_OFFSET))
-
+#define RCC_APB1ENR (*(volatile unsigned int *)(RCC_PERIPHERAL + RCC_APB1ENR_OFFSET))
 enum State{
 	OFF=48,
 	ON=49
