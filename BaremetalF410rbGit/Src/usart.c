@@ -1,8 +1,8 @@
 /*
  * usart.c
  *
- *  Created on: Nov 15, 2025
- *      Author: baki
+ *  Created on: Dec 15, 2025
+ *      Author: baki Dinc
  */
 #include "usart.h"
 #include <stdint.h>
