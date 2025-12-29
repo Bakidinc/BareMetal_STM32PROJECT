@@ -2,7 +2,7 @@
  * usart.c
  *
  *  Created on: Dec 15, 2025
- *      Author: baki Dinc
+ *      Author: baki Dinc s
  */
 #include "usart.h"
 #include <stdint.h>
