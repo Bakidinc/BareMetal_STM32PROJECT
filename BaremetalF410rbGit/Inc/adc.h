@@ -22,10 +22,17 @@
 #define ADC_SQR3_OFFSET  0x34
 #define ADC_SQR3		(*(volatile unsigned int *)(ADC1_PERIPHERAL +ADC_SQR3_OFFSET))
 
+#define ADC_DR_OFFSET	 0x4C
+#define ADC_DR			(*(volatile unsigned int *)(ADC1_PERIPHERAL + ADC_DR_OFFSET))
 
-#define ADC_SR_EOC 		(1<<2)
-#define ADC_CR2_ADON	(1<<0)
-#define ADC_CR2_SWSTART (1<<30)
-#define ADC_CR2_CONT	(1<<1)
+#define RCC_APB2_OFFSET  0x44
+#define RCC_APB2		(*(volatile unsigned int *)(RCC_PERIPHERAL + RCC_APB2_OFFSET) )
 
+
+
+void adc_init(void);
+void adc_conversion(void);
+int adc_read(void);
+void adc_sample_signal(char buff, int prgrm_state);
+void adc_transmit_signal(char * buff);
 #endif /* ADC_H_ */

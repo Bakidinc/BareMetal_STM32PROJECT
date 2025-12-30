@@ -39,14 +39,15 @@ void usart2_init(void){
 		USART2_CR1 |=	CR1_UE;
 
 }
-void usart2_write(int ch) {
-    uint32_t timeout = 100000;
-    while(!(USART2_SR & SR_TXE) && timeout--) {
-        ; // TXE bayrağı set olana kadar bekle
+void usart2_write(char ch) {
+    // TXE (Transmit Data Register Empty) bayrağı 1 olana kadar bekle.
+    // Döngü içi boş; sadece donanımın hazır olmasını bekliyoruz.
+    while(!(USART2_SR & SR_TXE)) {
+        // Bekle...
     }
-    if(timeout > 0) {
-        USART2_DR = ch;
-    }
+
+    // Donanım hazır, veriyi gönder.
+    USART2_DR = (ch & 0xFF);
 }
 
 uint8_t usart2_read(void){

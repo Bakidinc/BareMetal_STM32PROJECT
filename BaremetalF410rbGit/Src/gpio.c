@@ -22,7 +22,7 @@
 #define BLUE_LED 	GPIOB5
 #define USER_BUTTON	GPIOC13
 #define USER_LED	GPIOA5
-int x;
+volatile int x ;
 
 void gpio_init(void) {
     // GPIO saat erişimini etkinleştir

@@ -33,7 +33,7 @@
 //prototypes
 
 void usart2_init(void);
-void usart2_write(int ch);
+void usart2_write(char ch);
 uint8_t usart2_read(void);
 void usart_set_baudrate(uint32_t pclk, uint32_t baud);
 
