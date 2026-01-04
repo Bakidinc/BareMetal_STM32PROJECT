@@ -59,6 +59,12 @@ void gpio_init(void) {
     // PA3 için AF7 (USART2_RX)
     GPIOA_AFRL &= ~(0xFU << (3 * 4));
     GPIOA_AFRL |=  (7U << (3 * 4));
+
+    GPIOA_MODER |=	(1U<<0);
+    GPIOA_MODER |=	(1U<<1);
+
+
+
 }
 void red_led_on	(void){
 
