@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD: Debug F410RB",
+            "cwd": "${workspaceFolder}/app",
+            "executable": "./firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "C:/OpenOCD/bin/openocd.exe",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "gdbPath": "C:/ArmToolchain/bin/arm-none-eabi-gdb.exe",
+            "device": "STM32F410RB",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+
+            // --- BURASI EKSİKTİ, BUNU EKLE ---
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            // ---------------------------------
+
+            "svdFile": "${workspaceFolder}/app/STM32F410.svd", 
+            "preLaunchTask": "Build Firmware",
+            "showDevDebugOutput": "raw"
+        }
+    ]
+}
