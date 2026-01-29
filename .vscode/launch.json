@@ -18,7 +18,7 @@
             "interface": "swd",
             "runToEntryPoint": "main",
 
-            // --- BURASI EKSİKTİ, BUNU EKLE ---
+            
             "liveWatch": {
                 "enabled": true,
                 "samplesPerSecond": 4
