@@ -1,23 +1,11 @@
-#include <libopencm3/stm32/rcc.h>
+#include <libopencm3/stm32/rcc.h> 
 #include <libopencm3/stm32/gpio.h>
-#include <libopencm3/cm3/systick.h>
-#include <libopencm3/cm3/vector.h>
+#include "core/system.h"
 
 #define CPU_FREQ (84000000)
 #define SYSTICK_FREQ (1000)
 
-volatile uint64_t ticks=0;
-void sys_tick_handler(void ){
-ticks++;
-}
 
-static uint64_t get_ticks(void ){
-    return ticks;
-}
-static void rcc_setup(void)
-{
-    rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_3V3_84MHZ]);
-}
 
 static void gpio_setup(void)
 {
@@ -25,12 +13,7 @@ static void gpio_setup(void)
     gpio_mode_setup(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO5);
 }
 
-static void systick_setup(void)
-{
-    systick_set_frequency(SYSTICK_FREQ, CPU_FREQ);
-    systick_counter_enable();
-    systick_interrupt_enable();
-}
+
 
 /*static void delay_cycles(uint32_t delay)
 {

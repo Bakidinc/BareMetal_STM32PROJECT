@@ -2,5 +2,5 @@ build/
 *.elf
 *.bin
 *.hex
-*.map
-.vscode/
+*.map/
+#.vscode

@@ -1,5 +1,0 @@
-../Src/adc.c:20:6:adc_init	4	static
-../Src/adc.c:44:6:adc_conversion	4	static
-../Src/adc.c:53:9:adc_read	4	static
-../Src/adc.c:62:6:adc_sample_signal	32	static
-../Src/adc.c:82:6:adc_transmit_signal	24	static

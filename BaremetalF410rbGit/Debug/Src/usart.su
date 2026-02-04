@@ -1,4 +1,0 @@
-../Src/usart.c:27:6:usart2_init	8	static
-../Src/usart.c:42:6:usart2_write	16	static
-../Src/usart.c:53:9:usart2_read	4	static
-../Src/usart.c:58:6:usart_set_baudrate	16	static
