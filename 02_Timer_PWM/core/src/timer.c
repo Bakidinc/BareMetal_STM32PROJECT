@@ -1,6 +1,7 @@
 #include "core/timer.h" 
 #include "libopencm3/stm32/timer.h"
 #include <libopencm3/stm32/rcc.h> 
+#include "libopencm3/stm32/usart.h"
 
 #define PRESCALER (84)
 #define ARR_VALUE (1000)
@@ -10,6 +11,7 @@
 void timer_setup(void){
     // Timer 5'in saatini aç
     rcc_periph_clock_enable(RCC_TIM5);
+    
 
     // Timer modu ayarları (Yukarı sayım, clock division vs)
     timer_set_mode(TIM5, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);

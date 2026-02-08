@@ -1,4 +1,4 @@
-src/core/timer.o: src/core/timer.c inc/core/timer.h \
+src/timer.o: src/timer.c inc/timer.h \
  ../libopencm3/include/libopencm3/stm32/timer.h \
  ../libopencm3/include/libopencm3/cm3/common.h \
  C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include/stdint.h \

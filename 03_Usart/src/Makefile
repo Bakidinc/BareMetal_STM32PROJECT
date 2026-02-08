@@ -1,7 +1,9 @@
-BINARY = firmware
-SRC_DIR = src
-INC_DIR = inc
-OPENCM3_DIR = ../libopencm3
+BINARY         = firmware
+SRC_DIR        = src
+INC_DIR        = inc
+OPENCM3_DIR    = ../libopencm3
+SHARED_SRC_DIR = ../shared/src
+SHARED_INC_DIR = ../shared/inc
 
 LIBNAME     = opencm3_stm32f4
 DEFS        += -DSTM32F4
@@ -14,6 +16,7 @@ LDFLAGS     += -L$(OPENCM3_DIR)/lib
 
 DEFS        += -I$(OPENCM3_DIR)/include
 DEFS        += -I$(INC_DIR)
+DEFS        += -I$(SHARED_INC_DIR)
 
 PREFIX      ?= arm-none-eabi-
 CC          := $(PREFIX)gcc
@@ -24,10 +27,12 @@ OPT			:= -O0
 DEBUG       := -ggdb3
 CSTD        ?= -std=c99
 
-# DÜZELTME BURADA YAPILDI:
+
 OBJS        += $(SRC_DIR)/firmware.o
-OBJS        += $(SRC_DIR)/core/system.o
-OBJS        += $(SRC_DIR)/core/timer.o
+#OBJS      	+= $(SRC_DIR)/core/system.o  
+OBJS        += $(SRC_DIR)/timer.o
+OBJS        += $(SHARED_SRC_DIR)/core/system.o
+OBJS        += $(SHARED_SRC_DIR)/core/uart.o
 
 TGT_CFLAGS  += $(OPT) $(CSTD) $(DEBUG)
 TGT_CFLAGS  += $(ARCH_FLAGS)

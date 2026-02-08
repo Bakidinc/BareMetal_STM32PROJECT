@@ -22,4 +22,19 @@ src/firmware.o: src/firmware.c \
  ../libopencm3/include/libopencm3/stm32/common/gpio_common_f24.h \
  ../libopencm3/include/libopencm3/stm32/common/gpio_common_f234.h \
  ../libopencm3/include/libopencm3/stm32/common/gpio_common_all.h \
- inc/core/system.h inc/common-defines.h inc/core/timer.h
+ inc/core/system.h inc/common-defines.h inc/timer.h \
+ ../libopencm3/include/libopencm3/cm3/scb.h ../shared/inc/core/uart.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/stdio.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/newlib.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/config.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include/stddef.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include/stdarg.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/_ansi.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+ C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/sys/stdio.h

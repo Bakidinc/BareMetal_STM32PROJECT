@@ -7,9 +7,8 @@
 /* Define memory regions. */
 MEMORY
 {
-	/* STM32F410RB: 128K Flash, 32K SRAM */
-	rom 	 (rx)  : ORIGIN = 0x08000000, LENGTH = 128K
-	ram 	 (rwx) : ORIGIN = 0x20000000, LENGTH = 32K
+    rom (rx) : ORIGIN = 0x08008000, LENGTH = 96K  /* Uygulama 32K ofsetle başlıyor */
+    ram (rwx) : ORIGIN = 0x20000000, LENGTH = 32K
 }
 
 /* Enforce emmition of the vector table. */

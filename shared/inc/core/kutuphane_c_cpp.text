@@ -1,0 +1,2 @@
+c_cpp_properties.json dosyasına,
+ "${workspaceFolder}/shared/inc" eklemeyi unutma yoksa kutuphanelerini xxxxx.c dosyalarin okuyamaz.

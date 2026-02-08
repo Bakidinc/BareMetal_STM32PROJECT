@@ -4,7 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/app/**",
-                "${workspaceFolder}/libopencm3/include"
+                "${workspaceFolder}/libopencm3/include",
+                "${workspaceFolder}/shared/inc"
+                
             ],
             "defines": [
                 "STM32F4",
