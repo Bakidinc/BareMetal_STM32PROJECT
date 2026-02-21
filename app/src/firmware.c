@@ -6,8 +6,9 @@
 #include "core/uart.h"
 #include <stdio.h>
 
-
 uint8_t msg_buffer[64];
+uint8_t data;
+uint8_t i = 0;
 static void gpio_setup(void)
 {
     rcc_periph_clock_enable(RCC_GPIOA);
@@ -17,7 +18,7 @@ static void gpio_setup(void)
     gpio_set_af(GPIOA, GPIO_AF2, GPIO0);
 
     gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO2 | GPIO3); // tx and rx pins
-    gpio_set_af(GPIOA, GPIO_AF7, GPIO2 | GPIO3);                          // mode af7
+    gpio_set_af(GPIOA, GPIO_AF7, GPIO2 | GPIO3);                         // mode af7
 }
 
 /*static void delay_cycles(uint32_t delay)
@@ -48,16 +49,10 @@ int main(void)
     float duty_cycle = 0.0f;
 
     while (1)
-    { // Her 10 milisaniyede bir döngüye gir
+    {
+        // 1. GÖREV: Periyodik İşler (PWM Güncelleme) - Her 10ms'de bir
         if (system_get_ticks() - start_time >= 100)
         {
-
-
-
-            sprintf(msg_buffer, "Time: %lu ms\r\n", (uint32_t)start_time);
-            uart_write(msg_buffer);
-
-
             timer_pwm_set_duty_cycle(duty_cycle);
             duty_cycle += 2.0f;
 
@@ -65,18 +60,18 @@ int main(void)
             {
                 duty_cycle = 0.0f;
             }
-
-            // Hesaplanan değeri Timer'a yükle
-            
-
             start_time = system_get_ticks();
         }
 
-      /*  while (uart_data_available())
+        // 2. GÖREV: UART İşleme (Ping-Pong) - Mümkün olan her an!
+        // system_delay olmadığı için burası her mikro saniyede bir kontrol edilir.
+// Değişmesi gereken yer (main.c):
+        while (uart_data_available())
         {
-            uint8_t data = uart_read_byte();
-            uart_write_byte(data + 1);
-        }*/
+            uint8_t rx_data = uart_read_byte();
+            uart_write_byte(rx_data); // '+ 1' kısmını sildik, gelen neyse o gider.
+        }
+       
     }
     return 0;
 }

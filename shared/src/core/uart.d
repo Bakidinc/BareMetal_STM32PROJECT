@@ -30,4 +30,5 @@
  ../libopencm3/include/libopencm3/stm32/common/usart_common_all.h \
  ../libopencm3/include/libopencm3/cm3/nvic.h \
  ../libopencm3/include/libopencm3/dispatch/nvic.h \
- ../libopencm3/include/libopencm3/stm32/f4/nvic.h
+ ../libopencm3/include/libopencm3/stm32/f4/nvic.h \
+ ../shared/inc/core/ring-buffer.h

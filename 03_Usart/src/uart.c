@@ -4,7 +4,7 @@
 #include "libopencm3/stm32/usart.h"
 #include "libopencm3/cm3/nvic.h"
 
-#define BAUD_RATE 115200
+#define BAUD_RATE 9600
 
 static uint8_t data_buffer =0U;
 static bool data_available =false;

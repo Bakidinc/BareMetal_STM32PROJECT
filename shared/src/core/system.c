@@ -30,3 +30,9 @@ void rcc_setup(void)
 {
     rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_3V3_84MHZ]);
 }
+void system_delay(uint64_t ms){
+    uint64_t end_time = system_get_ticks() + ms;
+  while (system_get_ticks() < end_time) {
+    // Spin
+  }
+}

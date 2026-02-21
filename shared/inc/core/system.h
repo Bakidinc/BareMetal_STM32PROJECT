@@ -11,7 +11,7 @@ void system_setup(void);
 uint64_t system_get_ticks(void );
 
 // Basit bir milisaniye geciktirme fonksiyonu
-void system_delay(uint32_t ms);
+void system_delay(uint64_t ms);
 void sys_tick_handler(void );
 void systick_setup(void);
 void rcc_setup(void);

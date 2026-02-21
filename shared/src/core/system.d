@@ -1,5 +1,5 @@
 ../shared/src/core/system.o: ../shared/src/core/system.c \
- inc/core/system.h inc/common-defines.h \
+ ../shared/inc/core/system.h inc/common-defines.h \
  C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include/stdint.h \
  C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/stdint.h \
  C:/Program\ Files/Arm/GNU\ Toolchain\ mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
