@@ -1,6 +1,18 @@
-build/
+# Build files
+*.o
+*.d
 *.elf
 *.bin
-*.hex
-*.map/
-#.vscode
+*.map
+
+# VSCode
+.vscode/
+
+# Build folders
+build/
+Debug/
+Release/
+
+# STM32CubeIDE
+*.launch
+.settings/
